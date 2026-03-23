@@ -6,6 +6,12 @@ resolution-markers = [
     "python_full_version < '3.14'",
 ]
 
+[manifest]
+members = [
+    "ai-agent-crash",
+    "project",
+]
+
 [[package]]
 name = "ai-agent-crash"
 version = "0.1.0"
@@ -1039,6 +1045,29 @@ sdist = { url = "https://files.pythonhosted.org/packages/19/56/8d4c30c8a1d070139
 wheels = [
     { url = "https://files.pythonhosted.org/packages/63/d7/97f7e3a6abb67d8080dd406fd4df842c2be0efaf712d1c899c32a075027c/platformdirs-4.9.4-py3-none-any.whl", hash = "sha256:68a9a4619a666ea6439f2ff250c12a853cd1cbd5158d258bd824a7df6be2f868", size = 21216, upload-time = "2026-03-05T18:34:12.172Z" },
 ]
+
+[[package]]
+name = "project"
+version = "0.1.0"
+source = { virtual = "project" }
+dependencies = [
+    { name = "python-frontmatter" },
+    { name = "requests" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "jupyter" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "python-frontmatter", specifier = ">=1.1.0" },
+    { name = "requests", specifier = ">=2.32.5" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "jupyter", specifier = ">=1.1.1" }]
 
 [[package]]
 name = "prometheus-client"
